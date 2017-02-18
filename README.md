@@ -1,3 +1,4 @@
+#Readme
 
 composer require newday/routing:@dev
 
@@ -5,7 +6,7 @@ composer require newday/routing:@dev
     "newday/routing": "@dev"
 }
 
-#index.php
+index.php
 
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -18,6 +19,6 @@ $app->route('/hello', function(){
 });
 
 $app->route('/helloclass', 'Vendor\Controllers\Hello:say');
-# Cria uma instancia de Hello e executa o metodo say
+Cria uma instancia de Hello e executa o metodo say
 
 $app->run();
