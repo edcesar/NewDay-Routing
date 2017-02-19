@@ -8,8 +8,11 @@ class Router implements RouterInterface
 
     public function __construct()
     {
-        $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-        $this->setUri($uri);
+        if (isset($_SERVER['REQUEST_URI'])) {
+            $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+            $this->setUri($uri);
+        }
+
     }
 
     public function setUri($uri)
@@ -53,6 +56,9 @@ class Router implements RouterInterface
                 return call_user_func_array([new $class, $method], []);
             }
         }
+
+        http_response_code(404);
+
     }
 
     public function getConfigs($route = null)

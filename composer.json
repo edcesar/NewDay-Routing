@@ -2,7 +2,10 @@
     "name": "newday/routing",
     "description": "NeyDay Routing",
     "type": "library",
-    "version": "0.1.1",
+    "keywords": ["route","routing"],
+    "homepage": "https://github.com/edcesar/newday-routing",
+    "license": "MIT",
+    "version": "1.0.1",
     "authors": [
         {
             "name": "Ed Cesar",

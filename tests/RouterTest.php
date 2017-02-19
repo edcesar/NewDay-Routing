@@ -88,4 +88,19 @@ class RouteUmTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals($expected, $actual);
     }
+
+    public function testDeveExecutarAHomeERetornarHome()
+    {
+        $this->router->route('/', function() {
+            return 'Home';
+        });
+
+        $this->router->setUri('/');
+
+        $actual = $this->router->run();
+
+        $expected = 'Home';
+
+        $this->assertEquals($expected, $actual);
+    }
 }
